@@ -1,0 +1,785 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\webMalefashion.bundle.scp.css",
+      "PackagePath": "staticwebassets\\webMalefashion.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\Magnific-Popup-master.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\Magnific-Popup-master.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\OwlCarousel2-2.3.4.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\OwlCarousel2-2.3.4.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\SlickNav-master.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\SlickNav-master.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\bootstrap-4.2.1-dist.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\bootstrap-4.2.1-dist.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\elegant_font.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\elegant_font.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\font-awesome-4.7.0.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\font-awesome-4.7.0.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\Source\\jquery-nice-select-1.1.0.zip",
+      "PackagePath": "staticwebassets\\malefashion\\Source\\jquery-nice-select-1.1.0.zip"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\nice-select.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\style.css",
+      "PackagePath": "staticwebassets\\malefashion\\css\\style.css"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\malefashion\\css\\style.css.map"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\malefashion\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\about-us.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\about-us.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\team-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\team-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\team-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\team-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\team-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\team-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\team-4.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\team-4.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\testimonial-author.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\testimonial-author.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\about\\testimonial-pic.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\about\\testimonial-pic.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\banner\\banner-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\banner\\banner-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\banner\\banner-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\banner\\banner-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\banner\\banner-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\banner\\banner-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-7.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-7.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-8.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-8.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\blog-9.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\blog-9.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\details\\blog-author.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\details\\blog-author.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\blog\\details\\blog-details.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\blog\\details\\blog-details.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\breadcrumb-bg.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\breadcrumb-bg.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-1.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-1.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-2.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-2.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-3.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-3.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-4.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-4.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-5.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-5.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-6.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-6.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-7.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-7.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\clients\\client-8.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\clients\\client-8.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\footer-logo.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\hero\\hero-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\hero\\hero-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\hero\\hero-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\hero\\hero-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\icon\\calendar.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\icon\\calendar.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\icon\\cart.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\icon\\cart.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\icon\\compare.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\icon\\compare.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\icon\\heart.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\icon\\heart.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\icon\\search.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\icon\\search.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-4.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-4.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-5.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-5.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\instagram\\instagram-6.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\instagram\\instagram-6.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\logo.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\logo.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\payment.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\payment.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product-sale.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product-sale.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-10.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-10.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-11.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-11.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-12.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-12.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-13.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-13.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-14.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-14.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-4.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-4.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-5.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-5.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-6.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-6.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-7.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-7.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-8.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-8.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\product\\product-9.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\product\\product-9.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\details-payment.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\details-payment.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\product-big-2.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\product-big-2.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\product-big-3.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\product-big-3.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\product-big-4.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\product-big-4.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\product-big.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\product-big.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\thumb-1.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\thumb-1.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\thumb-2.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\thumb-2.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\thumb-3.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\thumb-3.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shop-details\\thumb-4.png",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shop-details\\thumb-4.png"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shopping-cart\\cart-1.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shopping-cart\\cart-1.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shopping-cart\\cart-2.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shopping-cart\\cart-2.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shopping-cart\\cart-3.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shopping-cart\\cart-3.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\img\\shopping-cart\\cart-4.jpg",
+      "PackagePath": "staticwebassets\\malefashion\\img\\shopping-cart\\cart-4.jpg"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery.nicescroll.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery.nicescroll.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\main.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\main.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\malefashion\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_about.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_about.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_base.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_base.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_blog-details.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_blog-details.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_blog-sidebar.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_blog-sidebar.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_blog.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_checkout.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_checkout.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_contact.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_contact.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_footer.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_header.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_hero.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_hero.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_home-page.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_home-page.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_product.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_product.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_responsive.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_responsive.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_shop-details.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_shop-details.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_shop.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_shop.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_shopping-cart.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_shopping-cart.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\_variable.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\_variable.scss"
+    },
+    {
+      "Id": "F:\\WebBack\\WebMalefashion\\webMalefashion\\wwwroot\\malefashion\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\malefashion\\sass\\style.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.webMalefashion.props",
+      "PackagePath": "build\\webMalefashion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.webMalefashion.props",
+      "PackagePath": "buildMultiTargeting\\webMalefashion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.webMalefashion.props",
+      "PackagePath": "buildTransitive\\webMalefashion.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.webMalefashion.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

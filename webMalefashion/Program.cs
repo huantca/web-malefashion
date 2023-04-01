@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using webMalefashion.Models;
 using webMalefashion.Respository;
 
@@ -8,6 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.WriteIndented = true;
+});
 
 var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
 builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));

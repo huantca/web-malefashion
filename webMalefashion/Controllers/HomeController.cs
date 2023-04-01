@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Linq;
 using webMalefashion.Models;
 using X.PagedList;
 
@@ -19,17 +20,24 @@ namespace webMalefashion.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(int ? page)
+        public IActionResult Index()
         {
-            int pageSize = 4;// so san pham tren 1 trang
-            int pageNumber = page == null || page < 1 ? 1 : page.Value;
-             var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
-           // string? url = db.Products.ToList()[0].Options.ToList()[0].ImageUrl;
-            // bieu thua lamda
-            PagedList<Product> pageList = new
-            PagedList<Product>(lstsanpham, pageNumber, pageSize);
+            // int pageSize = 4;// so san pham tren 1 trang
+            // int pageNumber = page == null || page < 1 ? 1 : page.Value;
+            //  var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
+            //// string? url = db.Products.ToList()[0].Options.ToList()[0].ImageUrl;
+            // // bieu thua lamda
+            // PagedList<Product> pageList = new
+            // PagedList<Product>(lstsanpham, pageNumber, pageSize);
 
-            return View(pageList);
+            // return View(pageList);
+
+            var products= db.Products.Include(p=>p.Options);
+            return View(products.ToList());
+            //var products = db.Products.ToList(p => p.Options);
+            //return View(products);
+
+
         }
         public IActionResult ShoppingCart()
         {
@@ -45,6 +53,11 @@ namespace webMalefashion.Controllers
             PagedList<Product> pageList = new
             PagedList<Product>(lstsanpham, pageNumber, pageSize);
             return View(pageList);
+        }
+        public IActionResult SanPhamTheoLoai(string manufacturedname)
+        {
+            List<Manufacturer> lstsanpham = db.Manufacturers.Where(x=>x.Name==manufacturedname).OrderBy(x=>x.Name).ToList();
+            return View(lstsanpham);
         }
 
         public IActionResult Privacy()

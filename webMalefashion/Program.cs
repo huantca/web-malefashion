@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using webMalefashion.Controllers;
 using webMalefashion.Models;
 using webMalefashion.Responsitory;
@@ -11,6 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
 builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));
 builder.Services.AddScoped<ILoaiBrandResponsitory, LoaiBrandRespository>();
+//csdl
+//builder.Services.AddControllers().AddJsonOptions(options =>
+//{
+//    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+//    options.JsonSerializerOptions.WriteIndented = true;
+//});
 
 
 // Add services to the container.

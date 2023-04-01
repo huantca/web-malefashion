@@ -1,6 +1,7 @@
 ﻿using Azure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 using webMalefashion.Models;
@@ -13,8 +14,8 @@ namespace webMalefashion.Controllers
         // MalefashionContext 
         MalefashionContext db = new MalefashionContext();
        
-        private string? pagedlst;
-        private int page;
+        //private string? pagedlst;
+        //private int page;
         private readonly ILogger<HomeController> _logger;
         // private object db;
 
@@ -24,32 +25,50 @@ namespace webMalefashion.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(int? page)       
+        //public IActionResult Index(int? page)
+        //{
+        //    int pageSize = 4;// số sản phẩm trên 1 trang
+        //    int pageNumber = page == null || page < 1 ? 1 : page.Value;
+
+        //    var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
+        //    PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
+
+        //    return View(lst);
+        //}
+        //csdl
+        public IActionResult Index()
         {
-            int pageSize = 4;// số sản phẩm trên 1 trang
-            int pageNumber = page == null || page < 1 ? 1 : page.Value;
-
-            var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
-            PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
-
-            return View(lst);
+            var products = db.Products.Include(p=>p.Options);
+            return View(products.ToList());
         }
-            public IActionResult ShoppingCart()
+        public IActionResult SanPhamTheoLoai(int maloai)
+        {
+            
+            List<Manufacturer> lstsanpham = db.Manufacturers.Where(x=> x.Id== maloai).OrderBy(x=> x.Name).ToList();
+           
+            //ViewBag.maloai = maloai;
+            return View(lstsanpham);
+        }
+
+        public IActionResult ShoppingCart()
         {
 
             return View();
         }
-        public IActionResult SPMenu(int? page)
+        public IActionResult SPMenu()
             
         {
-            int pageSize = 4;// số sản phẩm trên 1 trang
-            int pageNumber = page == null || page < 1 ? 1 : page.Value;
+            //int pageSize = 12;// số sản phẩm trên 1 trang
+            //int pageNumber = page == null || page < 1 ? 1 : page.Value;
 
-            var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
-            PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
+            //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
+            //PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
 
-            return View(lst);
-          
+            //return View(lst);
+
+            var products = db.Products.Include(p => p.Options);
+            return View(products.ToList());
+
         }
 
         public IActionResult Privacy()

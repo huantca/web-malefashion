@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using webMalefashion.Models;
+using webMalefashion.Respository;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
+builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));
+builder.Services.AddScoped<ILoaiBranchRepository, LoaiBranchRepository>();
 
 var app = builder.Build();
 

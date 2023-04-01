@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\WebBack\\webMalefashion\\webMalefashion\\webMalefashion.csproj": {}
+    "D:\\CNTT3(Ki_2)\\LapTrinhWeb\\BT\\web-malefashion\\webMalefashion\\webMalefashion.csproj": {}
   },
   "projects": {
-    "F:\\WebBack\\webMalefashion\\webMalefashion\\webMalefashion.csproj": {
+    "D:\\CNTT3(Ki_2)\\LapTrinhWeb\\BT\\web-malefashion\\webMalefashion\\webMalefashion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\WebBack\\webMalefashion\\webMalefashion\\webMalefashion.csproj",
+        "projectUniqueName": "D:\\CNTT3(Ki_2)\\LapTrinhWeb\\BT\\web-malefashion\\webMalefashion\\webMalefashion.csproj",
         "projectName": "webMalefashion",
-        "projectPath": "F:\\WebBack\\webMalefashion\\webMalefashion\\webMalefashion.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "F:\\WebBack\\webMalefashion\\webMalefashion\\obj\\",
+        "projectPath": "D:\\CNTT3(Ki_2)\\LapTrinhWeb\\BT\\web-malefashion\\webMalefashion\\webMalefashion.csproj",
+        "packagesPath": "C:\\Users\\Kieu Anh\\.nuget\\packages\\",
+        "outputPath": "D:\\CNTT3(Ki_2)\\LapTrinhWeb\\BT\\web-malefashion\\webMalefashion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kieu Anh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,34 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "X.PagedList": {
+              "target": "Package",
+              "version": "[8.4.7, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.4.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

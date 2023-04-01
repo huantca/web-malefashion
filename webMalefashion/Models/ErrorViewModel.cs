@@ -1,4 +1,4 @@
-namespace webMalefashion.Models
+﻿namespace webMalefashion.Models
 {
     public class ErrorViewModel
     {

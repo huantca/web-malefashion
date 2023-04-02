@@ -23,6 +23,7 @@ namespace webMalefashion.Controllers
 
         public IActionResult Privacy()
         {
+            // hello world
             return View();
         }
 

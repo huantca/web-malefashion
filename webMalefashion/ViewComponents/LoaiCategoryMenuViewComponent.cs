@@ -4,10 +4,10 @@ using webMalefashion.Responsitory;
 
 namespace webMalefashion.ViewComponents
 {
-    public class LoaiCategoryViewComponent : ViewComponent
+    public class LoaiCategoryMenuViewComponent : ViewComponent
     {
         private readonly ILoaiBrandResponsitory _loaiCategory;
-        public LoaiCategoryViewComponent(ILoaiBrandResponsitory loaiBrandResponsitory)
+        public LoaiCategoryMenuViewComponent(ILoaiBrandResponsitory loaiBrandResponsitory)
         {
             _loaiCategory = loaiBrandResponsitory;
         }

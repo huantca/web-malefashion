@@ -9,7 +9,10 @@
                 <ul class="nice-scroll">
                     @foreach (var item in Model)
                     {
-                        <li><a href="#">@item.Name</a></li>
+                        <li>
+                            <a asp-controller="Home" asp-action="SanPhamTheoCategory"
+                           asp-route-maloai="@item.Id">@item.Name</a>
+                        </li>
 
                     }
                     

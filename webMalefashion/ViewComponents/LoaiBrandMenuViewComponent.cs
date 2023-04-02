@@ -18,7 +18,7 @@ namespace webMalefashion.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var loaibrand = _loaiBrand.GetAllLoaiBrand().OrderBy(x => x.Id);
+            var loaibrand = _loaiBrand.GetAllLoaiBrand().OrderBy(x => x.Name);
             //categoty
             
 

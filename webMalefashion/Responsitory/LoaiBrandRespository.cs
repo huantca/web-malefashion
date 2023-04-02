@@ -66,7 +66,40 @@ namespace webMalefashion.Responsitory
             return categoryId;
         }
 
-        Manufacturer ILoaiBrandResponsitory.GetLoaiCategory(Category category)
+        Category ILoaiBrandResponsitory.GetLoaiCategory(Category category)
+        {
+            throw new NotImplementedException();
+        }
+        //option price
+        public Option Add(Option optionId)
+        {
+            _context.Options.Add(optionId);
+            _context.SaveChanges();
+            return optionId;
+        }
+
+        public Option Delete(Option optionId)
+        {
+            throw new NotImplementedException();
+        }
+        public IEnumerable<Option> GetAllLoaiPrice()
+        {
+            return _context.Options;
+        }
+
+        public Option GetLoaiPrice(Option optionId)
+        {
+            return _context.Options.Find(optionId);
+        }
+
+        public Option Update(Option optionId)
+        {
+            _context.Update(optionId);
+            _context.SaveChanges();
+            return optionId;
+        }
+
+        Option ILoaiBrandResponsitory.GetLoaiPrice(Option option)
         {
             throw new NotImplementedException();
         }

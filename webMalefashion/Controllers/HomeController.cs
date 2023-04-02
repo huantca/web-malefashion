@@ -45,10 +45,22 @@ namespace webMalefashion.Controllers
         public IActionResult SanPhamTheoLoai(int maloai)
         {
             
-            List<Manufacturer> lstsanpham = db.Manufacturers.Where(x=> x.Id== maloai).OrderBy(x=> x.Name).ToList();
+            List<Product> lstsanpham = db.Products.Where(x=> x.ManufacturerId== maloai).OrderBy(x=> x.Name).Include(p=>p.Options).ToList();
            
             //ViewBag.maloai = maloai;
             return View(lstsanpham);
+        }
+        public IActionResult SanPhamTheoCategory(int maloai)
+        {
+            List<Product> lstsanpham = db.Products.Where(x => x.CategoryId == maloai).OrderBy(x => x.Name).Include(p => p.Options).ToList();
+
+            //ViewBag.maloai = maloai;
+            return View(lstsanpham);
+        }
+        public IActionResult SanPhamTheoPrice(decimal priced)
+        {
+            var products = db.Options.Where(x=>x.Price== priced);
+            return View(products.ToList());
         }
 
         public IActionResult ShoppingCart()
@@ -56,20 +68,32 @@ namespace webMalefashion.Controllers
 
             return View();
         }
-        public IActionResult SPMenu()
+        //public IActionResult SPMenu()
             
+        //{
+        //    //int pageSize = 12;// số sản phẩm trên 1 trang
+        //    //int pageNumber = page == null || page < 1 ? 1 : page.Value;
+
+        //    //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
+        //    //PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
+
+        //    //return View(lst);
+
+        //    var products = db.Products.Include(p => p.Options);
+        //    return View(products.ToList());
+
+        //}
+        public IActionResult SPMenu(int? page)
         {
-            //int pageSize = 12;// số sản phẩm trên 1 trang
+            //int pageSize = 4;// so san pham tren 1 trang
             //int pageNumber = page == null || page < 1 ? 1 : page.Value;
-
             //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
-            //PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
-
-            //return View(lst);
-
             var products = db.Products.Include(p => p.Options);
             return View(products.ToList());
-
+            // bieu thua lamda
+            //PagedList<Product> pageList = new
+            //PagedList<Product>(lstsanpham, pageNumber, pageSize);
+            //return View(pageList);
         }
 
         public IActionResult Privacy()

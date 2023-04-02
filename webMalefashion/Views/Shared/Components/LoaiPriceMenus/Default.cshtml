@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Option>
+<div class="card">
+<div class="card-heading">
+    <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
+</div>
+<div id="collapseThree" class="collapse show" data-parent="#accordionExample">
+    <div class="card-body">
+        <div class="shop__sidebar__price">
+            <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <a asp-controller="Home" asp-action="SanPhamTheoPrice"
+                           asp-route-priced="@item.Price">@item.Price</a>
+                        </li>
+
+                    }
+            </ul>
+        </div>
+    </div>
+</div>
+ </div>

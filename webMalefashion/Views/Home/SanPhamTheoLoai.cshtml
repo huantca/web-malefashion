@@ -7,14 +7,13 @@
 
 @*@using X.PagedList.Mvc.Core
 @model X.PagedList.IPagedList<Product>*@
-@model List<Manufacturer>
+@model List<Product>
 @foreach (var item in Model)
 {
 
     <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="product__item">
             <div class="product__item__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+item.Options.ToList()[0].ImageUrl)">
-             style="background-image: url(&quot;../malefashion/img/product/product-2.jpg&quot;);">
                 <ul class="product__hover">
                     <li><a href="#"><img src="../malefashion/img/icon/heart.png" alt=""></a></li>
                     <li>

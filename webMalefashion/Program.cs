@@ -1,6 +1,24 @@
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
+using webMalefashion.Controllers;
+using webMalefashion.Models;
+using webMalefashion.Responsitory;
+
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//phân loại memnu
+var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
+builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));
+builder.Services.AddScoped<ILoaiBrandResponsitory, LoaiBrandRespository>();
+//csdl
+//builder.Services.AddControllers().AddJsonOptions(options =>
+//{
+//    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+//    options.JsonSerializerOptions.WriteIndented = true;
+//});
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

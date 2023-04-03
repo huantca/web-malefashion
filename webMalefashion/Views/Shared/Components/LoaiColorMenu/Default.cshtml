@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Option>
+<div class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseFive">Colors</a>
+    </div>
+    <div id="collapseFive" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__color">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a asp-controller="Home" asp-action="SanPhamTheoColor"
+                       asp-route-size="@item.ColorHex">@item.ColorHex</a>
+                    </li>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>

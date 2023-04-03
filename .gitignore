@@ -23,7 +23,9 @@ _UpgradeReport_Files/
 # Directories #
 ###############
 bin/
+webMalefashion/bin/
 obj/
+webMalefashion/obj/
 TestResults/
 ###################
 # Web publish log #

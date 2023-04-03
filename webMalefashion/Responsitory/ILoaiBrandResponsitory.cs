@@ -18,8 +18,15 @@ namespace webMalefashion.Responsitory
         Option Add(Option optionId);
         Option Update(Option optionId);
         Option Delete(Option optionId);
-        Option GetLoaiPrice(Option option);
+        Option GetLoaiPrice(Option optionId);
         IEnumerable<Option> GetAllLoaiPrice();
+
+        //Option GetLoaiSize(Option option);
+        IEnumerable<Option> GetAllLoaiSize();
+
+        IEnumerable<Option> GetAllLoaiColor();
+
+
 
 
 

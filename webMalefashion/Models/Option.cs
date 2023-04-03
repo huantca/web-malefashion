@@ -16,4 +16,5 @@ public partial class Option
     public string SizeId { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
+   // public string Size { get; internal set; }
 }

@@ -63,10 +63,35 @@ namespace webMalefashion.Controllers
             return View(products.ToList());
         }
 
+        public IActionResult SanPhamTheoSize(string size)
+        {
+            var products = db.Options.Where(x => x.SizeId == size);
+            return View(products.ToList());
+        }
+
+        public IActionResult SanPhamTheoColor(string color)
+        {
+            var products = db.Options.Where(x => x.ColorHex == color);
+            return View(products.ToList());
+        }
+
         public IActionResult ShoppingCart()
         {
 
             return View();
+        }
+        public IActionResult IndexDetail()
+        {
+            return View();
+
+        }
+        public IActionResult ChiTietSanPham(string maSp)
+        {
+            var sanpham = db.Products.SingleOrDefault(x => x.Name == maSp);
+            var anhsanpham = db.Products.Where(x => x.Name== maSp).ToList();
+            ViewBag.anhsanpham = anhsanpham;
+            return View(sanpham);
+
         }
         //public IActionResult SPMenu()
             

@@ -99,9 +99,25 @@ namespace webMalefashion.Responsitory
             return optionId;
         }
 
-        Option ILoaiBrandResponsitory.GetLoaiPrice(Option option)
+        Option ILoaiBrandResponsitory.GetLoaiPrice(Option optionId)
         {
             throw new NotImplementedException();
         }
+        //size
+
+        public IEnumerable<Option> GetAllLoaiSize()
+        {
+            return _context.Options;
+        }
+
+        //public Option GetLoaiSize(Option optionId)
+        //{
+        //    return _context.Options.Find(optionId);
+        //}
+        public IEnumerable<Option> GetAllLoaiColor()
+        {
+            return _context.Options;
+        }
+
     }
 }

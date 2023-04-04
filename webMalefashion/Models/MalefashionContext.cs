@@ -15,6 +15,8 @@ public partial class MalefashionContext : DbContext
     {
     }
 
+    public virtual DbSet<CartDetail> CartDetails { get; set; }
+
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Customer> Customers { get; set; }
@@ -37,10 +39,27 @@ public partial class MalefashionContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=malefashion.mssql.somee.com;User Id=dec_31_SQLLogin_1; Password=gvstelp8my;Initial Catalog=malefashion;Integrated Security=False;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
+        => optionsBuilder.UseSqlServer("Data Source=malefashion.mssql.somee.com;Initial Catalog=malefashion;User Id=dec_31_SQLLogin_1; Password=gvstelp8my;Integrated Security=False;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<CartDetail>(entity =>
+        {
+            entity.HasKey(e => new { e.CustomerId, e.ProductId, e.OptionId }).HasName("PK__cart_det__93E10694D63086D2");
+
+            entity.ToTable("cart_details");
+
+            entity.Property(e => e.CustomerId).HasColumnName("customer_id");
+            entity.Property(e => e.ProductId).HasColumnName("product_id");
+            entity.Property(e => e.OptionId).HasColumnName("option_id");
+            entity.Property(e => e.Amount).HasColumnName("amount");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.CartDetails)
+                .HasForeignKey(d => d.CustomerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__cart_deta__custo__4A8310C6");
+        });
+
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__category__3213E83F9333895A");
@@ -114,30 +133,31 @@ public partial class MalefashionContext : DbContext
 
         modelBuilder.Entity<Option>(entity =>
         {
-            entity.HasKey(e => new { e.ProductId, e.ColorHex, e.SizeId }).HasName("PK__option__22A384FB5AA929C2");
+            entity.HasKey(e => new { e.Id, e.ProductId }).HasName("PK__option__7663CFE0A81E52EB");
 
             entity.ToTable("option");
 
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.ColorHex)
                 .HasMaxLength(10)
                 .IsUnicode(false)
                 .HasColumnName("color_hex");
-            entity.Property(e => e.SizeId)
-                .HasMaxLength(5)
-                .IsUnicode(false)
-                .HasColumnName("size_id");
             entity.Property(e => e.ImageUrl)
                 .HasMaxLength(255)
                 .HasColumnName("image_url");
             entity.Property(e => e.Price)
                 .HasColumnType("money")
                 .HasColumnName("price");
+            entity.Property(e => e.SizeId)
+                .HasMaxLength(5)
+                .IsUnicode(false)
+                .HasColumnName("size_id");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Options)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__option__product___1AD3FDA4");
+                .HasConstraintName("FK__option__product___4F47C5E3");
         });
 
         modelBuilder.Entity<Permission>(entity =>

@@ -1,8 +1,8 @@
-﻿@model webMalefashion.Models.Product
+﻿@model webMalefashion.ViewModels.HomeProductDetailViewModel;
 
 @{
     ViewData["Title"] = "ChiTietSanPham";
-    Layout = "~/Views/Shared/_LayoutMenu.cshtml";
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
 }
 <section class="shop-details">
         <div class="product__details__pic">
@@ -18,10 +18,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3">
-                        <ul class="nav nav-tabs" role="tablist">
+                        @*<ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+Model.Options.ToList()[0].ImageUrl)" 
+                                <div class="product__thumb__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+Model.options.ToList()[0].ImageUrl)" 
                                 style="background-image: url(&quot;../malefashion/img/shop-details/thumb-1.png&quot;);">
                                     </div>
                                 </a>
@@ -45,15 +45,15 @@
                                     </div>
                                 </a>
                             </li>
-                        </ul>
+                        </ul>*@
                     </div>
                     <div class="col-lg-6 col-md-9">
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__pic__item">
-                                    @foreach ( var img in ViewBag.anhsanpham){
-                                    <img src="@Url.Content("../malefashion/img/product/"+img.ImageUrl)" alt="">
-                                    }
+                                    
+                                    <img src="@Url.Content("../malefashion/img/product/"+Model.options[0].ImageUrl)" alt="">
+                                    
                                 </div>
                             </div>
                             <div class="tab-pane" id="tabs-2" role="tabpanel">
@@ -82,7 +82,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <div class="product__details__text">
-                            <h4>@Model.Name</h4>
+                            <h4>@Model.product.Name</h4>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -91,8 +91,8 @@
                                 <i class="fa fa-star-o"></i>
                                 <span> - 5 Reviews</span>
                             </div>
-                            <h3>@Model.Manufacturer<span>70.00</span></h3>
-                            <p>@Model.Description</p>
+                            <h3>@Model.options[0].Price<span>70.00</span></h3>
+                            <p>@Model.product.Description</p>
                             <div class="product__details__option">
                                 <div class="product__details__option__size">
                                     <span>Size:</span>

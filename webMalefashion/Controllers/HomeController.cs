@@ -7,6 +7,7 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using webMalefashion.Models;
 using X.PagedList;
+using webMalefashion.ViewModels;
 
 namespace webMalefashion.Controllers
 {
@@ -85,12 +86,17 @@ namespace webMalefashion.Controllers
             return View();
 
         }
-        public IActionResult ChiTietSanPham(string maSp)
+        public IActionResult ChiTietSanPham(int maSp)
         {
-            var sanpham = db.Products.SingleOrDefault(x => x.Name == maSp);
-            var anhsanpham = db.Products.Where(x => x.Name== maSp).ToList();
-            ViewBag.anhsanpham = anhsanpham;
-            return View(sanpham);
+            var sanpham = db.Products.SingleOrDefault(x => x.Id == maSp);
+            var options = db.Options.Where(x => x.ProductId == maSp).ToList();
+            var homeProductDetaulViewModel = new HomeProductDetailViewModel
+            {
+                product = sanpham,
+                options = options
+            }
+            ;
+            return View(homeProductDetaulViewModel);
 
         }
         //public IActionResult SPMenu()

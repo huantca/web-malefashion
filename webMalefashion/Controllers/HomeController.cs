@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using webMalefashion.Models;
+using X.PagedList;
 
 namespace webMalefashion.Controllers
 {
@@ -15,10 +16,14 @@ namespace webMalefashion.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index() {
-            var products = db.Products
-                .Include(p => p.Options);
-            return Json(products);
+        public IActionResult Index(int? page)
+        {
+            int pageSize = 8;
+
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.Products.Include(p => p.Options).AsNoTracking().OrderBy(x => x.Name);
+            PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
+            return View(lst);
         }
 
         public IActionResult Privacy()

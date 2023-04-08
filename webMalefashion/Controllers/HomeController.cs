@@ -99,34 +99,18 @@ namespace webMalefashion.Controllers
             return View(homeProductDetaulViewModel);
 
         }
-        //public IActionResult SPMenu()
-            
-        //{
-        //    //int pageSize = 12;// số sản phẩm trên 1 trang
-        //    //int pageNumber = page == null || page < 1 ? 1 : page.Value;
 
-        //    //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
-        //    //PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
-
-        //    //return View(lst);
-
-        //    var products = db.Products.Include(p => p.Options);
-        //    return View(products.ToList());
-
-        //}
         public IActionResult SPMenu(int? page)
         {
-            //int pageSize = 4;// so san pham tren 1 trang
-            //int pageNumber = page == null || page < 1 ? 1 : page.Value;
-            //var lstsanpham = db.Products.AsNoTracking().OrderBy(x => x.Name);
+
             var products = db.Products.Include(p => p.Options);
             return View(products.ToList());
-            // bieu thua lamda
-            //PagedList<Product> pageList = new
-            //PagedList<Product>(lstsanpham, pageNumber, pageSize);
-            //return View(pageList);
         }
 
+        public IActionResult UserDetails() {
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();

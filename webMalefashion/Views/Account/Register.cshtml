@@ -15,6 +15,24 @@
                         <input type="text" name="name" id="name" placeholder="Your Name"/>
                     </div>
                     <div class="form-group">
+                        <label for="phone-number">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="number" name="phone-number" id="phone-number" placeholder="Your Phone Number"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="text" name="address" id="address" placeholder="Your Address"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-of-birth">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Your Date Of Birth"/>
+                    </div>
+                    <div class="form-group">
                         <label for="email">
                             <i class="zmdi zmdi-email"></i>
                         </label>
@@ -62,13 +80,12 @@
         let data = {
             id: 1,
             name: $("#name").val(),
-            dateOfBirth: "31/12/2002",
-            phoneNumber: "012345678",
-            email: "an@gmail.com",
-            username: "An",
+            dateOfBirth: $("#date-of-birth").val(),
+            phoneNumber: $("#phone-number").val(),
+            email: $("#email").val(),
             password: $("#pass").val(),
-            address: "123",
-            registrationTime: "31/12/2002"
+            address: $("#address").val(),
+            registrationTime: new Date().toISOString().slice(0, 10)
         }
         $.ajax({
             url: "https://localhost:44342/api/user/register",
@@ -81,6 +98,7 @@
                 document.getElementById("return-home").click();
             }, 
             error: function(){ 
+                $("#loader_container").css("display", "none");
                 alert("Cannot get data"); 
             } 
         })

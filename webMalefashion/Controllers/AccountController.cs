@@ -1,13 +1,13 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.InteropServices.JavaScript;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Converters;
-using NuGet.Protocol;
 using webMalefashion.Models;
 
 namespace webMalefashion.Controllers; 
@@ -22,59 +22,91 @@ public class AccountController : Controller {
         _config = config;
     }
     
-    
     public IActionResult Register() {
         return View();
     }
     
     public IActionResult Signin() {
-        return View();
+        if (Request.Cookies["name"] == null) {
+            return View();
+        }
+        return RedirectToAction("UserDetails", "Home");
     }
 
     [HttpPost]
     [Route("api/user/register")]
+    [SuppressMessage("ReSharper.DPA", "DPA0009: High execution time of DB command", MessageId = "time: 571ms")]
     public OkObjectResult RegisterApi([FromBody] dynamic data) {
-        var format = "dd/MM/yyyy"; // your datetime format
+        var format = "yyyy-MM-dd"; // your datetime format
         var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
         
         Customer customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(data.ToString(), dateTimeConverter);
 
-        var id = db.Customers.Select(c => c.Id).Max() + 1;
+        int id = 1;
+        try {
+            id = db.Customers.Select(c => c.Id).Max() + 1;
+        }
+        catch (Exception) {
+            id = 1;
+        }
         customer.Id = id;
+        customer.Role = "User";
         
         // encode password
         if (customer.Password != null) customer.Password = Sha256(customer.Password);
         db.Customers.Add(customer);
         db.SaveChangesAsync();
 
-        return Ok(new {
-            token = GenerateToken(new Account(customer.Username, customer.Password)),
-            username = customer.Username,
+        var response = new {
+            token = GenerateToken(new Account(customer.Email, customer.Password, customer.Role)),
+            name = customer.Name,
             email = customer.Email
-        });
+        };
+        
+        HttpContext.Response.Cookies.Append("token", response.token,
+            // cookie expired for 7 days
+            new CookieOptions{Expires = DateTime.Now.AddDays(7)});
+        HttpContext.Response.Cookies.Append("name", response.name);
+
+        return Ok(response);
     }
 
     [HttpPost]
     [Route("api/user/signin")]
+    [SuppressMessage("ReSharper.DPA", "DPA0009: High execution time of DB command", MessageId = "time: 666ms")]
     public ActionResult SigninApi([FromBody] dynamic data) {
-        var format = "dd/MM/yyyy";
-        var dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = format };
-        
-        Customer customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(data.ToString(), dateTimeConverter);
-
+        Customer customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(data.ToString());
         string password = Sha256(customer.Password);
+        
         Customer currentCustomer = db.Customers
             .FirstOrDefault(x => 
-                x.Username.ToLower() == customer.Username.ToLower() && 
+                x.Email.ToLower() == customer.Email.ToLower() && 
                 x.Password == password);
+        
         if (currentCustomer != null) {
-            return Ok(new {
-                token = GenerateToken(new Account(currentCustomer.Username, currentCustomer.Password)),
-                username = currentCustomer.Username,
-                email = currentCustomer.Email
-            });
+            var response = new {
+                token = GenerateToken(new Account(currentCustomer.Email, currentCustomer.Password, currentCustomer.Role)),
+                name = currentCustomer.Name,
+                email = currentCustomer.Email,
+                role = currentCustomer.Role
+            };
+        
+            HttpContext.Response.Cookies.Append("token", response.token,
+                // cookie expired for 7 days
+                new CookieOptions{Expires = DateTime.Now.AddDays(7)});
+
+            HttpContext.Response.Cookies.Append("name", response.name);
+
+            return Ok(response);
         }
         return Unauthorized("username or password is in correct");
+    }
+
+    [HttpPost]
+    [Authorize]
+    [Route("api/account/validate")]
+    public ActionResult ValidateToken() {
+        return Ok();
     }
 
     [HttpGet]

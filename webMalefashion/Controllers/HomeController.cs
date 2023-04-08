@@ -1,12 +1,7 @@
-﻿using Azure;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
 using webMalefashion.Models;
-using X.PagedList;
 
 namespace webMalefashion.Controllers
 {

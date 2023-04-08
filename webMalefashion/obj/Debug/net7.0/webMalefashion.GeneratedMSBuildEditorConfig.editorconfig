@@ -16,24 +16,48 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\_subject\ASP.NET\BTL\web-malefashion\webMalefashion
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Account/Signin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/ChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/IndexDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/SanPhamTheoCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0NhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/SanPhamTheoColor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0NvbG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/SanPhamTheoLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0xvYWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/SanPhamTheoPrice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb1ByaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/SanPhamTheoSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb1NpemUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Home/ShoppingCart.cshtml]
@@ -48,8 +72,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haUJyYW5kTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Components/LoaiCategoryMenu/DefaultCategory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haUNhdGVnb3J5TWVudVxEZWZhdWx0Q2F0ZWdvcnkuY3NodG1s
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Components/LoaiCategoryMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haUNhdGVnb3J5TWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Components/LoaiColorMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haUNvbG9yTWVudVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Components/LoaiPriceMenus/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haVByaWNlTWVudXNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Components/LoaiSizeMenu/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTG9haVNpemVNZW51XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/Error.cshtml]
@@ -58,6 +94,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/_LayoutCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/_LayoutDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/_subject/ASP.NET/BTL/web-malefashion/webMalefashion/Views/Shared/_LayoutMale.cshtml]

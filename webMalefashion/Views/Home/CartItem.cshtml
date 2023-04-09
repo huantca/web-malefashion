@@ -32,7 +32,7 @@
         @{ var id1 = item.Id;}
         id="@id1" class="cart__price">@(Model.Amount * item.Options.ToList()[0].Price)</td>
     <td class="cart__close">
-        <i onclick="remove('@containerId', @item.Id, @item.Options.ToList()[0].Price)" class="fa fa-close"></i>
+        <i onclick="remove('@containerId', @item.Id, '@id1')" class="fa fa-close"></i>
     </td>
 </tr>
 
@@ -57,9 +57,12 @@
         document.getElementById(productId).textContent = `${(price * amount).toFixed(2)}`
     }
     
-    function remove(id, productId, price) {
+    function remove(id, productId, priceId) {
+        let total = parseFloat(document.getElementById(priceId).textContent)
+        console.log(document.getElementById(priceId))
+        console.log(total)
+        update(-1, productId, -total, 0)
         document.getElementById(id).remove()
-        update(-2, productId, price, 0)
     }
     
     function getCookie(name) {
@@ -71,13 +74,14 @@
     function update(amount, id, price, action) {
 
         let total = document.getElementById("super-total")
-        if (amount < 0) {
-            total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price * amount).toString()
+        console.log(amount)
+        if (amount <= 0) {
+            total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price * amount).toFixed(2).toString()
         } else {
             if (action === 1) {
-                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) + price).toString()            
+                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) + price).toFixed(2).toString()            
             } else {
-                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price).toString()                            
+                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price).toFixed(2).toString()                            
             }
         }
         

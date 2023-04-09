@@ -1,6 +1,18 @@
-﻿@model IEnumerable<Option>
+﻿@model IEnumerable<String>
+<style>
+    .shop__sidebar__color a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 20px;
+        text-align: center;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+    }
+</style>
 <div class="card">
-    <div class="card-heading">
+<div class="card-heading">
         <a data-toggle="collapse" data-target="#collapseFive">Colors</a>
     </div>
     <div id="collapseFive" class="collapse show" data-parent="#accordionExample">
@@ -8,11 +20,11 @@
             <div class="shop__sidebar__color">
                 @foreach (var item in Model)
                 {
-                    <li>
-                        <a asp-controller="Home" asp-action="SanPhamTheoColor"
-                       asp-route-size="@item.ColorHex">@item.ColorHex</a>
-                    </li>
 
+                    <li style="list-style: none">
+                        <a asp-controller="Home" asp-action="SanPhamTheoColor"
+                       asp-route-color="@item" style="background: @item; color:@item"></a>
+                    </li>
                 }
             </div>
         </div>

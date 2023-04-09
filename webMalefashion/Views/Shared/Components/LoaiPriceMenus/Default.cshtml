@@ -1,22 +1,33 @@
-﻿@model IEnumerable<Option>
-<div class="card">
-<div class="card-heading">
-    <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
-</div>
-<div id="collapseThree" class="collapse show" data-parent="#accordionExample">
-    <div class="card-body">
-        <div class="shop__sidebar__price">
-            <ul>
-                    @foreach (var item in Model)
-                    {
-                        <li>
-                            <a asp-controller="Home" asp-action="SanPhamTheoPrice"
-                           asp-route-priced="@item.Price">@item.Price</a>
-                        </li>
+﻿
+@model IEnumerable<Option>
 
-                    }
-            </ul>
+<div class="card">
+    <div class="card-heading">
+        <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
+    </div>
+    <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
+        <div class="card-body">
+            <div class="shop__sidebar__price">
+                <form method="post" asp-controller="Home" asp-action="SearchProducts">
+                    <input type="hidden" name="price_from" value="0">
+                    <input type="hidden" name="price_to" value="50">
+                    <ul>
+                        <li>
+                            <button style="border: none; background:none" type="submit" name="price_range" value="0-13.000">0-13.000VNĐ</button>
+                           
+                        </li>
+                        <li>
+                            <button style="border: none; background:none" type="submit" name="price_range" value="13.000-40.000">13.000-40.000VNĐ</button>
+
+                        </li>
+                        <li>
+                            <button style="border: none; background:none" type="submit" name="price_range" value="40.000-90.000">40.000-90.000VNĐ</button>
+
+                        </li>
+                        <!-- Other links here -->
+                    </ul>
+                </form>
+            </div>
         </div>
     </div>
 </div>
- </div>

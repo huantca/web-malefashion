@@ -166,14 +166,12 @@
                         </div>
                         <div class="shop__sidebar__accordion">
                             <div class="accordion" id="accordionExample">
-                               @await Component.InvokeAsync("LoaiCategoryMenu");
-                               
-                                @await Component.InvokeAsync("LoaiBrandMenu");
-                                @await Component.InvokeAsync("LoaiPriceMenus");
-                             @await Component.InvokeAsync("LoaiSizeMenu");
-                                @await Component.InvokeAsync("LoaiColorMenu");
-                               
-                                <div class="card">
+                               @await Component.InvokeAsync("LoaiCategoryMenu")
+                                @await Component.InvokeAsync("LoaiBrandMenu")
+                                @await Component.InvokeAsync("LoaiPriceMenus")
+                             @await Component.InvokeAsync("LoaiSizeMenu")
+                             @await Component.InvokeAsync("LoaiColorMenu")
+                                @*<div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseSix">Tags</a>
                                     </div>
@@ -190,7 +188,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                     </div>

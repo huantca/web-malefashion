@@ -23,5 +23,7 @@ public partial class Customer
 
     public DateTime? RegistrationTime { get; set; }
 
+    public virtual ICollection<CartDetail> CartDetails { get; } = new List<CartDetail>();
+
     public virtual ICollection<SellReceipt> SellReceipts { get; } = new List<SellReceipt>();
 }

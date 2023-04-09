@@ -12,7 +12,7 @@ namespace webMalefashion.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var loaisize = _loaiSize.GetAllLoaiSize().OrderBy(x => x.SizeId);
+            var loaisize = _loaiSize.GetAllLoaiSize()./*OrderBy(x => x.SizeId).*/Select(x => x.SizeId).Distinct().ToList();
             //
 
 

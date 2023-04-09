@@ -12,7 +12,8 @@ namespace webMalefashion.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var loaicolor = _loaiColor.GetAllLoaiColor().OrderBy(x => x.SizeId);
+            var loaicolor = _loaiColor.GetAllLoaiColor().Select(x => x.ColorHex).Distinct().ToList();
+;
             //
 
 

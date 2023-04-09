@@ -3,8 +3,10 @@
     ViewData["Title"] = "SanPhamTheoSize";
     Layout = "~/Views/Shared/_LayoutMenu.cshtml";
 }
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Option>
 
-@model List<Option>
+@*@model List<Option>*@
 @foreach (var item in Model)
 {
     <div class="col-lg-4 col-md-6 col-sm-6">
@@ -46,4 +48,7 @@
     </div>
 
 }
+<div class="product__pagination">
+    @Html.PagedListPager(Model, page=>Url.Action("SanPhamTheoSize", new{page= page, size= ViewBag.size}))
+</div>
 

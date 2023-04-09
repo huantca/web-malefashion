@@ -12,9 +12,11 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 //phân loại memnu
-var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
-builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));
+// var connectionString = builder.Configuration.GetConnectionString("MaleFashionContext");
+// builder.Services.AddDbContext<MalefashionContext>(s => s.UseSqlServer(connectionString));
+builder.Services.AddTransient<MalefashionContext>();
 builder.Services.AddScoped<ILoaiBrandResponsitory, LoaiBrandRespository>();
+builder.Services.AddSingleton<HomeController>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

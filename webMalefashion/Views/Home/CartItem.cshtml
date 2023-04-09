@@ -1,0 +1,100 @@
+@using webMalefashion.Controllers
+@model CartDetail
+@inject HomeController HomeController
+
+@{
+    var item = HomeController.GetProductById(Model.ProductId);
+    var containerId = "container-cart-product" + item.Id;
+}
+
+<tr id="@containerId">
+    <td class="product__cart__item">
+        <div class="product__cart__item__pic">
+            <img src="@Url.Content("../malefashion/img/product/" + item.Options.ToList()[0].ImageUrl)" alt="">
+        </div>
+        <div class="product__cart__item__text">
+            <h6>@item.Name</h6>
+            <h5>@item.Options.ToList()[0].Price</h5>
+        </div>
+    </td>
+    <td class="quantity__item">
+        <div class="quantity">
+            <div class="pro-qty-2">
+                @{ var id = "amount" + item.Id;}
+                <span onclick="decrease(@item.Options.ToList()[0].Price, '@id')" class="dec qtybtn">-</span>
+                <input
+                    id="@id" type="text" value="@Model.Amount">
+                <span onclick="increase(@item.Options.ToList()[0].Price, '@id')" class="inc qtybtn">+</span>
+            </div>
+        </div>
+    </td>
+    <td 
+        @{ var id1 = item.Id;}
+        id="@id1" class="cart__price">@(Model.Amount * item.Options.ToList()[0].Price)</td>
+    <td class="cart__close">
+        <i onclick="remove('@containerId', @item.Id, @item.Options.ToList()[0].Price)" class="fa fa-close"></i>
+    </td>
+</tr>
+
+<script>
+    
+    function increase(price, id) {
+        let amount = 1 + parseInt(document.getElementById(id).value)
+        let productId = id.split("amount")[1]
+
+        update(amount, productId, price, 1)
+
+        document.getElementById(productId).textContent = `${(price * amount).toFixed(2)}`
+    }
+    
+    function decrease(price, id) {
+        let amount = -1 + parseInt(document.getElementById(id).value)
+        if (amount < 0) amount = 0
+        let productId = id.split("amount")[1]
+
+        update(amount, productId, price, -1)
+
+        document.getElementById(productId).textContent = `${(price * amount).toFixed(2)}`
+    }
+    
+    function remove(id, productId, price) {
+        document.getElementById(id).remove()
+        update(-2, productId, price, 0)
+    }
+    
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    function update(amount, id, price, action) {
+
+        let total = document.getElementById("super-total")
+        if (amount < 0) {
+            total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price * amount).toString()
+        } else {
+            if (action === 1) {
+                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) + price).toString()            
+            } else {
+                total.textContent = "$ " + (parseFloat(total.textContent.split("$")[1].trim()) - price).toString()                            
+            }
+        }
+        
+        $.ajax({
+            url: `https://localhost:44342/api/cart/update?amount=${amount}&productId=${id}`,
+            type: "PUT",
+            contentType: 'application/json; charset=utf-8',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', `Bearer ${getCookie("token")}`);
+            },
+            async: true,
+            success: function (data) { 
+                console.log("data updated")
+            }, 
+            error: function(){ 
+                console.error("error update data")
+            }
+        })
+    }
+</script>

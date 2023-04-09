@@ -15,13 +15,13 @@ public partial class Customer
 
     public string? Email { get; set; }
 
-    public string? Username { get; set; }
-
     public string? Password { get; set; }
 
     public string? Address { get; set; }
 
     public DateTime? RegistrationTime { get; set; }
+
+    public string? Role { get; set; }
 
     public virtual ICollection<CartDetail> CartDetails { get; } = new List<CartDetail>();
 

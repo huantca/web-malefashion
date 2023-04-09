@@ -7,12 +7,30 @@
         <div class="signup-content">
             <div class="signup-form">
                 <h2 class="form-title">Sign up</h2>
-                <form method="POST" class="register-form" id="register-form">
+                <div method="POST" class="register-form" id="register-form">
                     <div class="form-group">
                         <label for="name">
                             <i class="zmdi zmdi-account material-icons-name"></i>
                         </label>
                         <input type="text" name="name" id="name" placeholder="Your Name"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-number">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="number" name="phone-number" id="phone-number" placeholder="Your Phone Number"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="text" name="address" id="address" placeholder="Your Address"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-of-birth">
+                            <i class="zmdi zmdi-account material-icons-name"></i>
+                        </label>
+                        <input type="date" name="date-of-birth" id="date-of-birth" placeholder="Your Date Of Birth"/>
                     </div>
                     <div class="form-group">
                         <label for="email">
@@ -41,16 +59,48 @@
                         </label>
                     </div>
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        <input onclick="submit()" type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="signup-image">
                 <figure>
                     <img src="../login/images/signup-image.jpg" alt="sing up image">
                 </figure>
-                <a href="#" class="signup-image-link">I am already member</a>
+                <a asp-controller="Account" asp-action="Signin" class="signup-image-link">I am already member</a>
+                <a asp-controller="Home" asp-action="Index" id="return-home" style="display: none"></a>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    function submit() {
+        $("#loader_container").css("display", "flex");
+        let data = {
+            id: 1,
+            name: $("#name").val(),
+            dateOfBirth: $("#date-of-birth").val(),
+            phoneNumber: $("#phone-number").val(),
+            email: $("#email").val(),
+            password: $("#pass").val(),
+            address: $("#address").val(),
+            registrationTime: new Date().toISOString().slice(0, 10)
+        }
+        $.ajax({
+            url: "https://localhost:44342/api/user/register",
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data),
+            async: true,
+            success: function (data) { 
+                console.log(data)
+                document.getElementById("return-home").click();
+            }, 
+            error: function(){ 
+                $("#loader_container").css("display", "none");
+                alert("Cannot get data"); 
+            } 
+        })
+    }
+</script>

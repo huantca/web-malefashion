@@ -213,4 +213,17 @@
         });
     });
 
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    let username = getCookie("name").replaceAll("%20", " ")
+    console.log(username)
+    if (username === undefined) {
+        document.getElementById("username").textContent = "Sign In";
+    } else {
+        document.getElementById("username").textContent = decodeURIComponent(username);
+    }
 })(jQuery);

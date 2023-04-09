@@ -50,7 +50,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ManufacturerId)
             </td>
-            <td>
+                    
+                <td>
                     <a asp-action="SuaSanPham" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="ChiTietSanPham" asp-route-id="@item.Id">Detail</a> |
                     <a asp-action="XoaSanPham" asp-route-id="@item.Id">Delete</a>

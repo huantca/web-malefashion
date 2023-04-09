@@ -1,0 +1,80 @@
+﻿@model webMalefashion.Models.Product
+
+@{
+    ViewData["Title"] = "ChiTietSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>ChiTietSanPham</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ManufacturerId)
+        </dd>
+        @for(int i = 0;i< Model.Options.Count;i++)
+        {
+            <div class="table"> 
+                <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Options[i].Id)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Options[i].Id)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Options[i].ColorHex)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Options[i].ColorHex)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Options[i].ImageUrl)
+                </dt>
+                <dd class="col-sm-10">
+                    <img width="50" height="50" style="border:1px"
+                         src="../malefashion/img/product/@Html.DisplayFor(model => model.Options[i].ImageUrl)">
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Options[i].Price)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Options[i].Price)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Options[i].SizeId)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Options[i].SizeId)
+                </dd>
+            </div>
+        }
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

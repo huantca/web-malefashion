@@ -19,7 +19,7 @@ public partial class Product
 
     public virtual Manufacturer? Manufacturer { get; set; }
 
-    public virtual ICollection<Option> Options { get; } = new List<Option>();
+    public virtual List<Option> Options { get; } = new List<Option>();
 
     public virtual ICollection<SellReceiptDetail> SellReceiptDetails { get; } = new List<SellReceiptDetail>();
 }

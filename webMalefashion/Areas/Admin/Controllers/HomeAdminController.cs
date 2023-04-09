@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.Options;
+using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore;
 using webMalefashion.Models;
 using X.PagedList;
@@ -12,6 +14,11 @@ namespace webMalefashion.Areas.Admin.Controllers
     public class HomeAdminController : Controller
     {
         MalefashionContext db = new MalefashionContext();
+        private readonly IWebHostEnvironment _webHost;
+        public HomeAdminController(IWebHostEnvironment webHost)
+        {
+            _webHost = webHost;
+        }
         [Route("")]
         [Route("index")]
         [Route("admin/homeadmin")]
@@ -44,36 +51,25 @@ namespace webMalefashion.Areas.Admin.Controllers
         {
             ViewBag.CategoryId = new SelectList(db.Categories.ToList(), "Id", "Name");
             ViewBag.ManufacturerId = new SelectList(db.Manufacturers.ToList(), "Id", "Name");
-            return View();
+            Product product = new Product();
+            product.Options.Add(new Option() { ProductId = 1 });         
+            return View(product);
         }
         [Route("ThemSanPham")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult ThemSanPham(Product sanPham)
         {
-            if (ModelState.IsValid)
+            for (int i = 0; i < sanPham.Options.Count; i++)
             {
-                int a = 0;
-                foreach(var index in db.Products)
-                {
-                    if(index.Id.Equals(sanPham.Id))
-                    {
-                        Response.WriteAsync("ID bị trùng", default);
-                        a = 1;
-                    }
-                    else
-                    {
-                        a = 0;
-                    }
-                }
-                if (a == 0)
-                {
-                    db.Products.Add(sanPham);
-                    db.SaveChanges();
-                }
-                return RedirectToAction("DanhMucSanPham");
+                _ = UploadFile(sanPham.Options[i].ProductPhoto);
+                string uniqueFileName = sanPham.Options[i].ProductPhoto.FileName;
+                sanPham.Options[i].ImageUrl = uniqueFileName;
             }
-            return View(sanPham);
+
+            db.Products.Add(sanPham);
+            db.SaveChanges();
+            return RedirectToAction("DanhMucSanPham");                    
         }
 
         [Route("SuaSanPham")]
@@ -82,21 +78,38 @@ namespace webMalefashion.Areas.Admin.Controllers
         {
             ViewBag.CategoryId = new SelectList(db.Categories.ToList(), "Id", "Name");
             ViewBag.ManufacturerId = new SelectList(db.Manufacturers.ToList(), "Id", "Name");
-            var sanPham = db.Products.Find(id);
-            return View(sanPham);
+            Product product = db.Products.Include(e => e.Options)
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+            return View(product);
         }
         [Route("SuaSanPham")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult SuaSanPham(Product sanPham)
         {
-            if (ModelState.IsValid)
+            List<Option> options = db.Options.Where(d => d.ProductId == sanPham.Id).ToList();
+            db.Options.RemoveRange(options);
+            db.SaveChanges();
+
+            //sanPham.Options.RemoveAll(n => n.Id == sanPham.Id);
+            for (int i = 0; i < sanPham.Options.Count; i++)
             {
-                db.Entry(sanPham).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("DanhMucSanPham", "HomeAdmin");
+                if (sanPham.Options[i].ProductPhoto != null)
+                {
+                     _ = UploadFile(sanPham.Options[i].ProductPhoto);
+                     string uniqueFileName = sanPham.Options[i].ProductPhoto.FileName;
+                     sanPham.Options[i].ImageUrl = uniqueFileName;
+                }
+                
             }
-            return View(sanPham);
+            
+            db.Attach(sanPham);
+            db.Entry(sanPham).State = EntityState.Modified;
+            db.Options.AddRange(sanPham.Options);
+            
+            db.SaveChanges();
+            return RedirectToAction("DanhMucSanPham", "HomeAdmin");           
         }
 
         [Route("XoaSanPham")]
@@ -130,8 +143,27 @@ namespace webMalefashion.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult ChiTietSanPham(int id)
         {
-            var detail = db.Products.Where(x => x.Id == id).FirstOrDefault();
-            return View(detail);
+           
+            Product product = db.Products.Include(e => e.Options)
+                .Where(a => a.Id == id)
+                .FirstOrDefault();
+            return View(product);
+        }
+        
+        private async Task<bool> UploadFile(IFormFile ufile)
+        {
+            if (ufile != null && ufile.Length > 0)
+            {
+                var fileName = Path.GetFileName(ufile.FileName);
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), @"wwwroot\malefashion\img\product", fileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ufile.CopyToAsync(fileStream);
+                }
+                return true;
+            }
+            return false;
         }
     }
 }
+

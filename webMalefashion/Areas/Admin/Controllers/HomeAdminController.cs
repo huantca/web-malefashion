@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.CodeAnalysis.Scripting;
@@ -19,12 +22,45 @@ namespace webMalefashion.Areas.Admin.Controllers
         {
             _webHost = webHost;
         }
+
+        [HttpGet]
         [Route("")]
         [Route("index")]
         [Route("admin/homeadmin")]
-        public IActionResult Index()
+        public IActionResult Index(string? token) {
+            if (token == null) return Unauthorized();
+            if (CheckTokenIsValid(token)) {
+                var securityToken = new JwtSecurityToken(Request.Cookies["token"]);
+                var data = securityToken.Claims.First(c => c.Type == ClaimTypes.UserData).Value;
+                
+                Customer customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(data);
+                customer = db.Customers.First(c => c.Id == customer.Id);
+                if (customer.Role == "User") return Unauthorized();
+                
+                return View();
+            }
+            return Unauthorized();
+        }
+        
+        public static long GetTokenExpirationTime(string token)
         {
-            return View();
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            var tokenExp = jwtSecurityToken.Claims.First(claim => claim.Type.Equals("exp")).Value;
+            var ticks= long.Parse(tokenExp);
+            return ticks;
+        }
+
+        public static bool CheckTokenIsValid(string token)
+        {
+            var tokenTicks = GetTokenExpirationTime(token);
+            var tokenDate = DateTimeOffset.FromUnixTimeSeconds(tokenTicks).UtcDateTime;
+
+            var now = DateTime.Now.ToUniversalTime();
+
+            var valid = tokenDate >= now;
+
+            return valid;
         }
         [Route("danhmucsanpham")]
         public IActionResult DanhMucSanPham(int? page)

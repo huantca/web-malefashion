@@ -73,6 +73,11 @@
             email: $("#your_email").val(),
             password: $("#your_pass").val(),
         }
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
         $.ajax({
             url: "https://localhost:44342/api/user/signin",
             type: "POST",
@@ -82,7 +87,17 @@
             success: function (data) { 
                 console.log(data)
                 if (data.role === 'Admin') {
-                    document.location.assign("https://localhost:44342/admin/danhmucsanpham")
+                    // $.ajax({
+                    //     url: "https://localhost:44342/admin",
+                    //     type: "GET",
+                    //     contentType: 'text/html; charset=utf-8',
+                    //     beforeSend: function (xhr) {
+                    //         xhr.setRequestHeader('Authorization', `Bearer ${getCookie("token")}`);
+                    //     },
+                    //     success: function (data) { 
+                    //     }
+                    // })
+                    document.location.assign(`https://localhost:44342/admin?token=${getCookie("token")}`)
                 } else {
                     document.getElementById("return-home").click();                
                 }

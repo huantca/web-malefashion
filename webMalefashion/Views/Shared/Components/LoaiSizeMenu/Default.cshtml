@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Option>
+﻿@model IEnumerable<String>
 <div class="card">
     <div class="card-heading">
         <a data-toggle="collapse" data-target="#collapseFour">Size</a>
@@ -8,13 +8,16 @@
             <div class="shop__sidebar__size">
                 @foreach (var item in Model)
                 {
-                    <li>
+                    @*<li style="list-style: none">
                         <a asp-controller="Home" asp-action="SanPhamTheoSize"
                        asp-route-size="@item.SizeId">@item.SizeId</a>
-                    </li>
-
+                    </li>*@
+                        <li style="list-style: none">
+                            <a asp-controller="Home" asp-action="SanPhamTheoSize"
+                       asp-route-size="@item" style="background: @item;color:#000000">@item</a>
+                        </li>
                 }
-               
+
             </div>
         </div>
     </div>

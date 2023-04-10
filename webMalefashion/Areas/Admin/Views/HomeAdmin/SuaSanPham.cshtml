@@ -73,14 +73,14 @@
                                 @for (int i = 0; i < Model.Options.Count; i++)
                                 {
                                     <tr>
-                                       @* <td>
-                                            
-                                            <input asp-for="@Model.Options[i].Id" class="form-control" style="width:70px" />
-                                            <span asp-validation-for="@Model.Options[i].Id" class="text-danger"></span>
-                                        </td>*@
                                         <td>
                                             
-                                            <input asp-for="@Model.Options[i].ColorHex" class="form-control" style="width:100px" />
+                                            <input asp-for="@Model.Options[i].Id" id="idOption" class="form-control" style="width:70px" />
+                                            <span asp-validation-for="@Model.Options[i].Id" class="text-danger"></span>
+                                        </td>
+                                        <td>
+
+                                            <input asp-for="@Model.Options[i].ColorHex" id="colorOption" class="form-control" style="width:100px" />
                                             <span asp-validation-for="@Model.Options[i].ColorHex" class="text-danger"></span>
                                         </td>
                                         <td>
@@ -97,13 +97,13 @@
                                                  style="border:1px" />
                                         </td>
                                         <td>
-                                        
-                                            <input asp-for="@Model.Options[i].Price" class="form-control" style="width:100px" />
+
+                                            <input asp-for="@Model.Options[i].Price" id="priceOption" class="form-control" style="width:100px" />
                                             <span asp-validation-for="@Model.Options[i].Price" class="text-danger"></span>
                                         </td>
                                         <td>
-                                            
-                                            <input asp-for="@Model.Options[i].SizeId" class="form-control" style="width:100px" />
+
+                                            <input asp-for="@Model.Options[i].SizeId" id="sizeOption" class="form-control" style="width:100px" />
                                             <span asp-validation-for="@Model.Options[i].SizeId" class="text-danger"></span>
                                         </td>
                                         <td></td>
@@ -164,6 +164,10 @@
         var nextrowIdx = eval(lastrowIdx) + 1;
 
         document.getElementById('hdnLastIndex').value = nextrowIdx;
+        document.getElementById('idOption').value  = null
+        document.getElementById('colorOption').value = null 
+        document.getElementById('priceOption').value = null
+        document.getElementById('sizeOption').value = null
 
         rowOuterHtml = rowOuterHtml.replaceAll('_' + lastrowIdx + '_', '_' + nextrowIdx + '_');
         rowOuterHtml = rowOuterHtml.replaceAll('[' + lastrowIdx + ']', '[' + nextrowIdx + ']');
@@ -175,10 +179,6 @@
 
 
         var x = document.getElementsByTagName("input");
-        for(var cnt = 0;cnt<x.length;cnt++){
-            if(x[cnt].type == "number" && x[cnt].id.indexOf('_'+newtrowIdx+'_')>0){
-                  x[cnt].value = ''
-            }
-        }
+        
     }
 </script>

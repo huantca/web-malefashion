@@ -1,7 +1,4 @@
-﻿using Microsoft.Build.Framework;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webMalefashion.Models;
@@ -16,7 +13,7 @@ public partial class Option
 
     public string? ImageUrl { get; set; }
 
-    
+
     [Display(Name = "Product Photo")]
     [NotMapped]
     [DataType(DataType.Upload)]

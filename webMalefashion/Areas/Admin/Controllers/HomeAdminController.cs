@@ -52,7 +52,9 @@ namespace webMalefashion.Areas.Admin.Controllers
             ViewBag.CategoryId = new SelectList(db.Categories.ToList(), "Id", "Name");
             ViewBag.ManufacturerId = new SelectList(db.Manufacturers.ToList(), "Id", "Name");
             Product product = new Product();
-            product.Options.Add(new Option() { ProductId = 1 });         
+            
+            product.Options.Add(new Option() { ProductId = 1 });
+            product.Id = db.Products.Count();
             return View(product);
         }
         [Route("ThemSanPham")]
@@ -66,7 +68,7 @@ namespace webMalefashion.Areas.Admin.Controllers
                 string uniqueFileName = sanPham.Options[i].ProductPhoto.FileName;
                 sanPham.Options[i].ImageUrl = uniqueFileName;
             }
-
+            
             db.Products.Add(sanPham);
             db.SaveChanges();
             return RedirectToAction("DanhMucSanPham");                    

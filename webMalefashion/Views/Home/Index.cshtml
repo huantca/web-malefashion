@@ -2,15 +2,16 @@
     ViewData["Title"] = "Home Page";
     Layout = "~/Views/Shared/_LayoutMale.cshtml";
 }
-@*@using X.PagedList.Mvc.Core*
-@model X.PagedList.IPagedList<Product>*@
-@model List<Product>
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Product>
+@*@model List<Product>*@
 
-@foreach(var item in Model) {
+@foreach (var item in Model)
+{
     <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
         <div class="product__item">
             <div style="cursor: pointer" onclick="gotoDetails('@item.Id')" class="product__item__pic set-bg"
-                data-setbg="@Url.Content("../malefashion/img/product/"+item.Options.ToList()[0].ImageUrl)">
+                 data-setbg="@Url.Content("../malefashion/img/product/"+item.Options.ToList()[0].ImageUrl)">
                 <span class="label">New</span>
                 <ul class="product__hover">
                     <li><a href="#"><img src="../malefashion/img/icon/heart.png" alt=""></a></li>
@@ -44,15 +45,12 @@
         </div>
     </div>
 
-
-    }
-
-   
-@*<div class="product__pagination">
+}
+<div class="product__pagination">
     @Html.PagedListPager(Model,page=>Url.Action("Index",new{page=page}))
 </div>
 
-*@
+
 
 <script>
     function gotoDetails(id) {

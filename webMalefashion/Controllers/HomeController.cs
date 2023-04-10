@@ -38,10 +38,14 @@ namespace webMalefashion.Controllers
         //    return View(lst);
         //}
         //csdl
-        public IActionResult Index()
+        public IActionResult Index(int? page)
         {
-            var products = db.Products.Include(p=>p.Options);
-            return View(products.ToList());
+            int pageSize = 8;
+
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.Products.Include(p => p.Options).AsNoTracking().OrderBy(x => x.Name);
+            PagedList<Product> lst = new PagedList<Product>(lstsanpham, pageNumber, pageSize);
+            return View(lst);
         }
         public IActionResult SanPhamTheoLoai(int maloai)
         {

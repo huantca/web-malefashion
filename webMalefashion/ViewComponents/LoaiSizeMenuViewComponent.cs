@@ -3,7 +3,7 @@ using webMalefashion.Responsitory;
 
 namespace webMalefashion.ViewComponents
 {
-    public class LoaiSizeMenuViewComponent: ViewComponent
+    public class LoaiSizeMenuViewComponent : ViewComponent
     {
         private readonly ILoaiBrandResponsitory _loaiSize;
         public LoaiSizeMenuViewComponent(ILoaiBrandResponsitory loaiBrandResponsitory)
@@ -12,7 +12,7 @@ namespace webMalefashion.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var loaisize = _loaiSize.GetAllLoaiSize().OrderBy(x => x.SizeId);
+            var loaisize = _loaiSize.GetAllLoaiSize().Select(x => x.SizeId).Distinct().ToList();
             //
 
 

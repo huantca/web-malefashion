@@ -3,7 +3,7 @@ using webMalefashion.Responsitory;
 
 namespace webMalefashion.ViewComponents
 {
-    public class LoaiColorMenuViewComponent: ViewComponent
+    public class LoaiColorMenuViewComponent : ViewComponent
     {
         private readonly ILoaiBrandResponsitory _loaiColor;
         public LoaiColorMenuViewComponent(ILoaiBrandResponsitory loaiBrandResponsitory)
@@ -12,7 +12,8 @@ namespace webMalefashion.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            var loaicolor = _loaiColor.GetAllLoaiColor().OrderBy(x => x.SizeId);
+            var loaicolor = _loaiColor.GetAllLoaiColor().Select(x => x.ColorHex).Distinct().ToList();
+            ;
             //
 
 

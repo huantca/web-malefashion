@@ -17,69 +17,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        @*<ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
-                                <div class="product__thumb__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+Model.options.ToList()[0].ImageUrl)" 
-                                style="background-image: url(&quot;../malefashion/img/shop-details/thumb-1.png&quot;);">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="../malefashion/img/shop-details/thumb-2.png" style="background-image: url(&quot;../malefashion/img/shop-details/thumb-2.png&quot;);">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="../malefashion/img/shop-details/thumb-3.png" style="background-image: url(&quot;../malefashion/img/shop-details/thumb-3.png&quot;);">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
-                                    <div class="product__thumb__pic set-bg" data-setbg="../malefashion/img/shop-details/thumb-4.png" style="background-image: url(&quot;../malefashion/img/shop-details/thumb-4.png&quot;);">
-                                        <i class="fa fa-play"></i>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>*@
+                    
+                    <div class="col-lg-4 col-md-9">
+                        <img src="@Url.Content("../malefashion/img/product/"+Model.options[0].ImageUrl)" alt="" >
                     </div>
-                    <div class="col-lg-6 col-md-9">
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    
-                                    <img src="@Url.Content("../malefashion/img/product/"+Model.options[0].ImageUrl)" alt="">
-                                    
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="../malefashion/img/shop-details/product-big-3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="../malefashion/img/shop-details/product-big.png" alt="">
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-4" role="tabpanel">
-                                <div class="product__details__pic__item">
-                                    <img src="../malefashion/img/shop-details/product-big-4.png" alt="">
-                                    <a href="https://www.youtube.com/watch?v=8PJ3_p7VqHw&amp;list=RD8PJ3_p7VqHw&amp;start_radio=1" class="video-popup"><i class="fa fa-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="product__details__content">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
+                
                     <div class="col-lg-8">
                         <div class="product__details__text">
                             <h4>@Model.product.Name</h4>
@@ -96,16 +38,20 @@
                             <div class="product__details__option">
                                 <div class="product__details__option__size">
                                     <span>Size:</span>
-                                    <label for="xxl">xxl
+                                    <label for="xxl">
+                                        xxl
                                         <input type="radio" id="xxl">
                                     </label>
-                                    <label class="active" for="xl">xl
+                                    <label class="active" for="xl">
+                                        xl
                                         <input type="radio" id="xl">
                                     </label>
-                                    <label for="l">l
+                                    <label for="l">
+                                        l
                                         <input type="radio" id="l">
                                     </label>
-                                    <label for="sm">s
+                                    <label for="sm">
+                                        s
                                         <input type="radio" id="sm">
                                     </label>
                                 </div>
@@ -130,9 +76,11 @@
                             </div>
                             <div class="product__details__cart__option">
                                 <div class="quantity">
-                                    <div class="pro-qty"><span class="fa fa-angle-up dec qtybtn"></span>
+                                    <div class="pro-qty">
+                                        <span class="fa fa-angle-up dec qtybtn"></span>
                                         <input type="text" value="1">
-                                    <span class="fa fa-angle-down inc qtybtn"></span></div>
+                                        <span class="fa fa-angle-down inc qtybtn"></span>
+                                    </div>
                                 </div>
                                 <a href="#" class="primary-btn">add to cart</a>
                             </div>
@@ -151,7 +99,13 @@
                             </div>
                         </div>
                     </div>
+                
                 </div>
+            </div>
+        </div>
+        <div class="product__details__content">
+            <div class="container">
+               
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="product__details__tab">

@@ -81,7 +81,11 @@
             async: true,
             success: function (data) { 
                 console.log(data)
-                document.getElementById("return-home").click();
+                if (data.role === 'Admin') {
+                    document.location.assign("https://localhost:44342/admin/danhmucsanpham")
+                } else {
+                    document.getElementById("return-home").click();                
+                }
             }, 
             error: function() {
                 $("#loader_container").css("display", "none");

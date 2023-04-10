@@ -188,7 +188,7 @@ public class AccountController : Controller {
         var token = new JwtSecurityToken(_config["Jwt:Issuer"],
             _config["Jwt:Audience"],
             claims,
-            expires: DateTime.Now.AddMinutes(15),
+            expires: DateTime.Now.AddDays(7),
             signingCredentials: credentials);
         return new JwtSecurityTokenHandler().WriteToken(token);
     }

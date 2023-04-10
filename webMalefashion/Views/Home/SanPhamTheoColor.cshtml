@@ -8,7 +8,7 @@
 {
     <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="product__item">
-            <div class="product__item__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+item.ImageUrl)">
+            <div onclick="gotoDetails(@item.Id)" class="product__item__pic set-bg" data-setbg="@Url.Content("../malefashion/img/product/"+item.ImageUrl)">
 
                 <ul class="product__hover">
                     <li><a href="#"><img src="../malefashion/img/icon/heart.png" alt=""></a></li>
@@ -20,7 +20,7 @@
             </div>
             <div class="product__item__text">
                 <h6>@item.Price</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a style="cursor: pointer" onclick="addToCart('@item.Id')" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                     <i class="fa fa-star-o"></i>
                     <i class="fa fa-star-o"></i>
@@ -46,3 +46,34 @@
 
 }
 </br>
+
+
+<script>
+    function gotoDetails(id) {
+        document.location.assign(`https://localhost:44342/Home/ChiTietSanPham?maSp=${id}`)
+    }
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    function addToCart(id) {
+        $.ajax({
+            url: `https://localhost:44342/api/add-to-cart?id=${id}`,
+            type: "POST",
+            contentType: 'application/json; charset=utf-8',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Authorization', `Bearer ${getCookie("token")}`);
+            },
+            async: true,
+            success: function (data) { 
+                alert("successfully added to cart");
+                console.log(data)
+            }, 
+            error: function(error){ 
+                alert("add to cart failed"); 
+                console.log("you might need login first");
+            } 
+        });
+    }
+</script>

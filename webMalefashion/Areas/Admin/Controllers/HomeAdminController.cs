@@ -185,7 +185,13 @@ namespace webMalefashion.Areas.Admin.Controllers
                 .FirstOrDefault();
             return View(product);
         }
-        
+        [Route("ChitietHoaDon")]
+        [HttpGet]
+        public IActionResult ChiTietHoaDon()
+        {
+            var hoadon = db.SellReceiptDetails.ToList();
+            return View(hoadon);
+        }
         private async Task<bool> UploadFile(IFormFile ufile)
         {
             if (ufile != null && ufile.Length > 0)

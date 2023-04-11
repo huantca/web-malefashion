@@ -23,7 +23,6 @@ namespace webMalefashion.Areas.Admin.Controllers
             _webHost = webHost;
         }
 
-        [HttpGet]
         [Route("")]
         [Route("index")]
         [Route("admin/homeadmin")]
@@ -123,7 +122,6 @@ namespace webMalefashion.Areas.Admin.Controllers
         }
         [Route("SuaSanPham")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult SuaSanPham(Product sanPham)
         {
             List<Option> options = db.Options.Where(d => d.ProductId == sanPham.Id).ToList();

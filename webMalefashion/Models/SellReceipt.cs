@@ -5,6 +5,13 @@ namespace webMalefashion.Models;
 
 public partial class SellReceipt
 {
+    public SellReceipt(int id, int? staffId, DateTime? time, int? customerId) {
+        Id = id;
+        StaffId = staffId;
+        Time = time;
+        CustomerId = customerId;
+    }
+
     public int Id { get; set; }
 
     public int? StaffId { get; set; }

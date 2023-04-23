@@ -160,7 +160,48 @@ namespace webMalefashion.Controllers
             }
             return res;
         }
-        
+
+        [HttpPost]
+        [Authorize]
+        [Route("api/sell-receipt")]
+        public IActionResult SaveSellReceipt() {
+            var securityToken = new JwtSecurityToken(Request.Cookies["token"]);
+            var data = securityToken.Claims.First(c => c.Type == ClaimTypes.UserData).Value;
+            
+            Customer customer = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(data);
+            customer = db.Customers.First(c => c.Id == customer.Id);
+
+            int id = 1;
+            try {
+                id = db.SellReceipts.Select(s => s.Id).Max() + 1;
+            }
+            catch (Exception) {
+                id = 1;
+            }
+
+            if (db.CartDetails.Where(c => c.CustomerId == customer.Id).ToList().Count == 0) return Ok("looix ");
+            db.SellReceipts.Add(new SellReceipt(id, 1, DateTime.Now, customer.Id));
+
+            db.SaveChanges();
+            
+            var carrDetails = db.CartDetails.ToList();
+
+            foreach (var details in carrDetails) {
+                int idd = 1;
+                try {
+                    idd = db.SellReceiptDetails.Select(s => s.Id).Max() + 1;
+                }
+                catch (Exception) {
+                    idd = 1;
+                }
+                var sellDetails = new SellReceiptDetail(idd, id, details.ProductId, details.Amount, 0); 
+                db.SellReceiptDetails.Add(sellDetails);
+                db.SaveChanges();
+            }
+            
+            return Ok("ok");
+        }
+
         public IActionResult IndexDetail()
         {
             return View();
@@ -223,6 +264,10 @@ namespace webMalefashion.Controllers
             return Ok("added to cart" + id);
         }
 
+        public IActionResult PaymentProcess() {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -232,6 +277,27 @@ namespace webMalefashion.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        
+        public static long GetTokenExpirationTime(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var jwtSecurityToken = handler.ReadJwtToken(token);
+            var tokenExp = jwtSecurityToken.Claims.First(claim => claim.Type.Equals("exp")).Value;
+            var ticks= long.Parse(tokenExp);
+            return ticks;
+        }
+
+        public static bool CheckTokenIsValid(string token)
+        {
+            var tokenTicks = GetTokenExpirationTime(token);
+            var tokenDate = DateTimeOffset.FromUnixTimeSeconds(tokenTicks).UtcDateTime;
+
+            var now = DateTime.Now.ToUniversalTime();
+
+            var valid = tokenDate >= now;
+
+            return valid;
         }
     }
 }

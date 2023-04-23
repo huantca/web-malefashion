@@ -45,7 +45,7 @@ public partial class MalefashionContext : DbContext
     {
         modelBuilder.Entity<CartDetail>(entity =>
         {
-            entity.HasKey(e => new { e.CustomerId, e.ProductId, e.OptionId }).HasName("PK__cart_det__93E10694D63086D2");
+            entity.HasKey(e => new { e.CustomerId, e.ProductId, e.OptionId }).HasName("PK__cart_det__93E10694D0ACE6C6");
 
             entity.ToTable("cart_details");
 
@@ -57,7 +57,7 @@ public partial class MalefashionContext : DbContext
             entity.HasOne(d => d.Customer).WithMany(p => p.CartDetails)
                 .HasForeignKey(d => d.CustomerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__cart_deta__custo__4A8310C6");
+                .HasConstraintName("FK__cart_deta__custo__55009F39");
         });
 
         modelBuilder.Entity<Category>(entity =>
@@ -133,7 +133,7 @@ public partial class MalefashionContext : DbContext
 
         modelBuilder.Entity<Option>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.ProductId }).HasName("PK__option__7663CFE0A81E52EB");
+            entity.HasKey(e => new { e.Id, e.ProductId }).HasName("PK__option__7663CFE04E903C39");
 
             entity.ToTable("option");
 
@@ -157,7 +157,7 @@ public partial class MalefashionContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.Options)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__option__product___4F47C5E3");
+                .HasConstraintName("FK__option__product___57DD0BE4");
         });
 
         modelBuilder.Entity<Permission>(entity =>
@@ -243,10 +243,11 @@ public partial class MalefashionContext : DbContext
 
         modelBuilder.Entity<SellReceiptDetail>(entity =>
         {
-            entity.HasKey(e => new { e.SellReceiptId, e.ProductId }).HasName("PK__sell_rec__896E969B1E6A43CC");
+            entity.HasKey(e => new { e.Id, e.SellReceiptId, e.ProductId }).HasName("PK__sell_rec__9A8501565EC901D6");
 
             entity.ToTable("sell_receipt_details");
 
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.SellReceiptId).HasColumnName("sell_receipt_id");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.Amount).HasColumnName("amount");
@@ -255,12 +256,12 @@ public partial class MalefashionContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.SellReceiptDetails)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__sell_rece__produ__208CD6FA");
+                .HasConstraintName("FK__sell_rece__produ__5BAD9CC8");
 
             entity.HasOne(d => d.SellReceipt).WithMany(p => p.SellReceiptDetails)
                 .HasForeignKey(d => d.SellReceiptId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__sell_rece__sell___1F98B2C1");
+                .HasConstraintName("FK__sell_rece__sell___5AB9788F");
         });
 
         modelBuilder.Entity<Staff>(entity =>
